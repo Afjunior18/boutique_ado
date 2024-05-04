@@ -27,9 +27,10 @@ SECRET_KEY = 'django-insecure-oc=p20#^wxw$1(x=5jqc1v@kr6+)^vc6v!g%0yd3xl5v*=jbr%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-afjunior18-boutiqueado-skxhexfgcra.ws-eu110.gitpod.io']
-
-
+ALLOWED_HOSTS = [
+                 '8000-afjunior18-boutiqueado-skxhexfgcra.ws-eu110.gitpod.io',
+                 '8000-afjunior18-boutiqueado-skxhexfgcra.ws-eu111.gitpod.io'
+                ]
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,6 +48,9 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+
+    # Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'boutique_ado.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -75,8 +81,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
