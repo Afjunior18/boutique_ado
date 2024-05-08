@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 import os
+from dotenv import load_dotenv
+
+
+# Load variables from file .env
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -181,7 +186,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51PCemyP3MjpZMpQU9tpcUfI23I50vsL6DPKuK2ZIhMq2iHKla4SjFH200ruSiPLV2V6fCDbaDbqctw1xPgCFEmTH00X3SjJLPr')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51PCemyP3MjpZMpQUwEk0lh1mbGIWiBjwzVJHqDcPqJjutyKEBqcBRt5uwC9QK9QtgFnTCYXGJn2y5ZcNYppIEK6h00AmVYGQgp')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET")
