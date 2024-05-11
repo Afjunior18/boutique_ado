@@ -36,7 +36,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
                  '8000-afjunior18-boutiqueado-skxhexfgcra.ws-eu110.gitpod.io',
                  '8000-afjunior18-boutiqueado-skxhexfgcra.ws-eu111.gitpod.io',
-                 'ckz8780-boutique-ado.herokuapp.com', 'localhost',
+                 'boutique-ado-ba.herokuapp.com', 'localhost',
                 ]
 # Application definition
 
